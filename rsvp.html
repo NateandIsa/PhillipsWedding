@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP · Isabel &amp; Nathan</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-monogram" href="index.html">I &amp; N</a>
+      <div class="nav-links">
+        <a href="details.html">Details</a>
+        <a href="finer-details.html">Finer Details</a>
+        <a href="registry.html">Registry</a>
+        <a class="nav-rsvp" href="rsvp.html" aria-current="page">RSVP</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <svg class="hero-sprig hero-sprig--left" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M60 195 C 55 140, 58 75, 64 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M58 168 q-26 -6 -32 -34 q28 4 32 34z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M59 134 q28 -10 31 -40 q-29 8 -31 40z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M60 100 q-24 -8 -28 -36 q26 6 28 36z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M62 66 q26 -8 30 -36 q-28 6 -30 36z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M63 36 q-20 -6 -24 -30 q22 4 24 30z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    </svg>
+    <svg class="hero-sprig hero-sprig--right" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M60 195 C 55 140, 58 75, 64 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M58 168 q-26 -6 -32 -34 q28 4 32 34z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M59 134 q28 -10 31 -40 q-29 8 -31 40z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M60 100 q-24 -8 -28 -36 q26 6 28 36z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M62 66 q26 -8 30 -36 q-28 6 -30 36z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M63 36 q-20 -6 -24 -30 q22 4 24 30z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    </svg>
+    <p class="eyebrow">Kindly Reply by November 8, 2026</p>
+    <h1>RSVP</h1>
+    <p class="hero-sub">Thirty seconds, we promise</p>
+  </header>
+
+  <main class="section">
+    <!-- Form -->
+    <form class="rsvp-form" id="rsvpForm" novalidate>
+      <div class="form-field">
+        <label for="fullName">Your full name</label>
+        <input type="text" id="fullName" name="name" autocomplete="name" required>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="form-field">
+        <label id="attendLabel">Will you be joining us?</label>
+        <div class="attend-choice" role="radiogroup" aria-labelledby="attendLabel">
+          <span>
+            <input type="radio" id="attendYes" name="attending" value="Joyfully accepts" required>
+            <label for="attendYes">Joyfully accepts</label>
+          </span>
+          <span>
+            <input type="radio" id="attendNo" name="attending" value="Regretfully declines">
+            <label for="attendNo">Regretfully declines</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-field" id="countField">
+        <label for="count">How many people in your party? (including you)</label>
+        <input type="number" id="count" name="count" min="1" max="12" value="1" inputmode="numeric">
+      </div>
+
+      <div class="form-field" id="songField">
+        <label for="song">A song that will get you on the dance floor (optional)</label>
+        <input type="text" id="song" name="song" placeholder="Artist — Song">
+      </div>
+
+      <div class="form-submit">
+        <button class="btn" type="submit" id="submitBtn">Send Our Reply</button>
+      </div>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <!-- Thank-you (hidden until submitted) -->
+    <div class="rsvp-thanks hidden" id="rsvpThanks">
+      <p class="big-script">Thank you!</p>
+      <p>Your reply is in — we can&rsquo;t wait to celebrate with you on
+      <strong>December 12, 2026</strong>.</p>
+      <p style="margin-top:1.6rem;">
+        <a class="btn btn--ghost" href="registry.html">Visit the Honeymoon Fund</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="f-script">Isabel &amp; Nathan</div>
+    <div class="f-caps">12.12.26 &nbsp;·&nbsp; #pushingP</div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/rsvp.js"></script>
+</body>
+</html>
